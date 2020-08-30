@@ -10,18 +10,20 @@
 	"dockerFile": "..\\Dockerfile",
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": { 
-		"terminal.integrated.shell.linux": null
+	"settings": {
+		"terminal.integrated.shell.linux": null,
+		"files.trimTrailingWhitespace": true, // ファイル保存時に行末の空白自動削除
+		"editor.formatOnSave": true // ファイル保存時に自動フォーマットが実行される
 	},
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": ["vscjava.vscode-java-pack"]
+	"extensions": ["vscjava.vscode-java-pack","eamodio.gitlens","visualstudioexptteam.vscodeintellicode","shardulm94.trailing-spaces","christian-kohler.path-intellisense","usernamehw.errorlens","gizak.shortcuts","coenraads.bracket-pair-colorizer-2"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Uncomment the next line to run commands after the container is created - for example installing curl.
-	// "postCreateCommand": "apt-get update && apt-get install -y curl",
+	"postCreateCommand": "apt-get update && apt-get install -y git",
 
 	// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
 	// "runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
