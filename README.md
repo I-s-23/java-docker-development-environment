@@ -11,6 +11,32 @@ Java Continer with Remote Containers
 3. このリポジトリをCloneしたディレクトリを選択
 4. Dockerが起動して、Javaが使用可能になる
 
+## 色々なメモ
+
+```text
+docker run -ti -d -gcloud-test
+
+gcloud --version
+java --version
+
+docker run -it --rm \
+  -v $HOME/.config/gcloud:$HOME/.config/gcloud \
+  -v $PWD:$PWD \
+  -e "HOME=$HOME" \
+  -w $PWD \
+  --entrypoint=gcloud \
+  google/cloud-sdk:alpine \
+  $*
+
+docker run -it --rm \
+  -v $PWD:$PWD \
+  -e "HOME=$HOME" \
+  -w $PWD \
+  --entrypoint=gcloud \
+  google/cloud-sdk:alpine \
+  $*
+```
+
 ## Version
 
 - Java

@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-WORKDIR /workspace
+WORKDIR /
 RUN apt-get update \
 && apt-get install -y software-properties-common \
 && add-apt-repository --yes ppa:rpardini/adoptopenjdk \
