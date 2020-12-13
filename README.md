@@ -13,7 +13,9 @@ Java Continer with Remote Containers
 
 ## 色々なメモ
 
-```text
+- ComposeでJavaとGcloudが別々のコンテナで定義して同じ箇所で使えるか試してみたがダメだった
+
+```bash
 docker run -ti -d -gcloud-test
 
 gcloud --version
